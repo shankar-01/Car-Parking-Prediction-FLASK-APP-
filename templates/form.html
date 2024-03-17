@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Park Form</title>
+</head>
+<body>
+    <h1>Car Park Form</h1>
+    <form method="POST">
+        <label for="car_park">Select Car Park:</label>
+        <select name="car_park" id="car_park">
+            {% for car_park in car_parks %}
+                <option value="{{ car_park }}">{{ car_park }}</option>
+            {% endfor %}
+        </select><br><br>
+        <label for="date">Select Date:</label>
+        <input type="datetime-local" id="date" name="date"><br><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
